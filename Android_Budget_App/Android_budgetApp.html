@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App Android | Menno de Vries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-top">
+                <a class="brand" href="../index.html">Menno de Vries</a>
+                <p class="role">Game Developer | Cybersecurity & Cloud Student</p>
+            </div>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="../index.html">Home</a>
+                <a href="../About_Me/AboutMe.html">About Me</a>
+                <a class="is-active" aria-current="page" href="../Projecten.html">Projecten</a>
+                <a href="../Keuzehulp.html">Systeemadvies</a>
+                <a href="../Cybersecurity.html">Cybersecurity</a>
+                <a href="../Blog.html">Blog</a>
+                <a href="../Contact.html">Contact</a>
+                <div class="lang-switcher">
+                    <label for="lang-select">Taal</label>
+                    <select id="lang-select" class="js-language-select" aria-label="Selecteer taal">
+                        <option value="nl">Nederlands</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+                <button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <div class="project-header">
+                    <div>
+                        <h1>Budget App Android</h1>
+                        <p>Een schaalbare Android-app die budgetten realtime verdeelt in potjes, met presets, advieslogica en financiele inzichten voor dagelijkse besluitvorming.</p>
+                        <div class="project-badges">
+                            <span>Android Studio</span>
+                            <span>Kotlin</span>
+                            <span>MVVM</span>
+                            <span>StateFlow + DataStore</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-small" href="../Projecten.html">Terug naar Projecten</a>
+                </div>
+                <div class="project-meta-grid">
+                    <article class="project-meta-item">
+                        <strong>Rol</strong>
+                        <p>Solo Developer</p>
+                    </article>
+                    <article class="project-meta-item">
+                        <strong>Platform</strong>
+                        <p>Android</p>
+                    </article>
+                    <article class="project-meta-item">
+                        <strong>Taal</strong>
+                        <p>Kotlin</p>
+                    </article>
+                    <article class="project-meta-item">
+                        <strong>Status</strong>
+                        <p>Actief in ontwikkeling</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="project-layout section">
+                <div>
+                    <h2>Project Beschrijving</h2>
+                    <p>Dit project startte als eenvoudige potjesverdeler en is doorontwikkeld naar een complete budget-app met realtime updates, adviesfunctionaliteit, scenario-analyse en beheerbare presets. De focus ligt op heldere gebruikerservaring, betrouwbaarheid van data en een architectuur die toekomstig onderhoud ondersteunt.</p>
+
+                    <div class="media-tabs" role="tablist" aria-label="Project media tabs">
+                        <button class="tab-btn is-active" type="button" data-tab-target="features">Features</button>
+                        <button class="tab-btn" type="button" data-tab-target="architecture">Architectuur</button>
+                        <button class="tab-btn" type="button" data-tab-target="code">Code</button>
+                    </div>
+
+                    <div class="media-panel is-active" data-tab-panel="features">
+                        <div class="grid two">
+                            <article class="card">
+                                <h3>Potjes en realtime verdeling</h3>
+                                <p>Gebruiker voert bedrag in, verdeelt percentages en ziet direct hoeveel elk potje ontvangt zonder extra bevestigingsstap.</p>
+                            </article>
+                            <article class="card">
+                                <h3>Presets beheer</h3>
+                                <p>Presets opslaan, laden, overschrijven, verwijderen en een standaardpreset kiezen die automatisch wordt geladen bij opstart.</p>
+                            </article>
+                            <article class="card">
+                                <h3>Adviesfunctionaliteit</h3>
+                                <p>Advies op basis van inkomen, vaste lasten en prioriteit (gebalanceerd, extra sparen of extra buffer).</p>
+                            </article>
+                            <article class="card">
+                                <h3>Inzichten en scenario's</h3>
+                                <p>Gezondheidsscore, ratio's en realtime "wat-als" simulatie zonder actieve preset te overschrijven.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="media-panel" data-tab-panel="architecture">
+                        <article class="card" style="margin-bottom: 0.8rem;">
+                            <h3>Gebruikte Technologieen</h3>
+                            <div class="project-tech" style="margin-top: 0.5rem;">
+                                <span>Kotlin</span>
+                                <span>Android Studio</span>
+                                <span>MVVM</span>
+                                <span>StateFlow</span>
+                                <span>DataStore</span>
+                                <span>JSON Import/Export</span>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <h3>Architectuur (MVVM)</h3>
+                            <p>De app gebruikt MVVM voor duidelijke scheiding tussen presentatie en businesslogica:</p>
+                            <ul class="checklist">
+                                <li><strong>View:</strong> UI-laag met schermen, formulieren en tabs.</li>
+                                <li><strong>ViewModel:</strong> verwerkt events, beheert state en levert realtime updates via StateFlow.</li>
+                                <li><strong>Model/Data:</strong> opslag van presets en instellingen via DataStore en JSON import/export.</li>
+                            </ul>
+                            <p style="margin-top: 0.8rem;">Deze opzet maakt de app stabieler, beter testbaar en makkelijker uitbreidbaar voor nieuwe features.</p>
+                        </article>
+                    </div>
+
+                    <div class="media-panel" data-tab-panel="code">
+                        <article class="code-card">
+                            <header>
+                                <span>Snippet: Realtime UI-state met StateFlow</span>
+                                <button class="copy-btn" type="button" data-copy-target="code-sample-1">Copy</button>
+                            </header>
+                            <div class="code-editor-wrap" aria-label="Kotlin codevoorbeeld 1">
+                                <textarea class="code-editor" id="code-sample-1" readonly spellcheck="false">class BudgetViewModel(
+    private val repository: BudgetRepository
+) : ViewModel() {
+
+    private val _uiState = MutableStateFlow(BudgetUiState())
+    val uiState: StateFlow<BudgetUiState> = _uiState
+
+    fun onIncomeChanged(value: Double) {
+        _uiState.update { current ->
+            current.copy(income = value).recalculateDistribution()
+        }
+    }
+}
+                                </textarea>
+                            </div>
+                        </article>
+                        <article class="code-card" style="margin-top: 0.8rem;">
+                            <header>
+                                <span>Snippet: Preset export naar JSON</span>
+                                <button class="copy-btn" type="button" data-copy-target="code-sample-2">Copy</button>
+                            </header>
+                            <div class="code-editor-wrap" aria-label="Kotlin codevoorbeeld 2">
+                                <textarea class="code-editor" id="code-sample-2" readonly spellcheck="false">fun exportPresetsToJson(presets: List<Preset>): String {
+    val json = Json { prettyPrint = true }
+    return json.encodeToString(presets)
+}
+
+fun importPresetsFromJson(payload: String): List<Preset> {
+    val json = Json { ignoreUnknownKeys = true }
+    return json.decodeFromString(payload)
+}
+                                </textarea>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="project-sidebar">
+                    <article class="card">
+                        <h3>Portfolio Highlights</h3>
+                        <ul class="checklist">
+                            <li>Realtime UI gedrag zonder extra bevestigingsflow</li>
+                            <li>Schaalbare MVVM-architectuur met duidelijke lagen</li>
+                            <li>Presets + advies + scenario-analyse in een app</li>
+                            <li>Import/export met conflict-afhandeling voor namen</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Resultaat voor presentatie</h3>
+                        <p>Deze pagina toont zowel productwaarde (gebruiksvriendelijkheid en inzichten) als technische kwaliteit (architectuur, state management en data-opslag), geschikt voor stage-, portfolio- en sollicitatiegesprekken.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Volgende uitbreidingen</h3>
+                        <ul class="checklist">
+                            <li>Unit tests op advies- en presetlogica</li>
+                            <li>Grafieken voor inkomsten/uitgaven trends</li>
+                            <li>Cloud sync voor multi-device gebruik</li>
+                        </ul>
+                    </article>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Menno de Vries. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        const tabButtons = document.querySelectorAll("[data-tab-target]");
+        const tabPanels = document.querySelectorAll("[data-tab-panel]");
+        const codeEditors = document.querySelectorAll(".code-editor");
+
+        const resizeCodeEditorsToContent = () => {
+            codeEditors.forEach((editor) => {
+                editor.style.height = "auto";
+                editor.style.height = `${editor.scrollHeight}px`;
+            });
+        };
+
+        tabButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const target = button.dataset.tabTarget;
+
+                tabButtons.forEach((item) => item.classList.remove("is-active"));
+                tabPanels.forEach((panel) => panel.classList.remove("is-active"));
+
+                button.classList.add("is-active");
+                const nextPanel = document.querySelector(`[data-tab-panel="${target}"]`);
+                if (nextPanel) nextPanel.classList.add("is-active");
+                requestAnimationFrame(resizeCodeEditorsToContent);
+            });
+        });
+
+        const copyButtons = document.querySelectorAll("[data-copy-target]");
+        copyButtons.forEach((button) => {
+            button.addEventListener("click", async () => {
+                const targetId = button.dataset.copyTarget;
+                const codeNode = document.getElementById(targetId);
+                if (!codeNode) return;
+
+                try {
+                    const codeText = "value" in codeNode ? codeNode.value : (codeNode.textContent || "");
+                    await navigator.clipboard.writeText(codeText);
+                    const previous = button.textContent;
+                    button.textContent = "Copied";
+                    setTimeout(() => {
+                        button.textContent = previous;
+                    }, 1200);
+                } catch (_error) {
+                    button.textContent = "Failed";
+                    setTimeout(() => {
+                        button.textContent = "Copy";
+                    }, 1200);
+                }
+            });
+        });
+
+        resizeCodeEditorsToContent();
+        window.addEventListener("resize", resizeCodeEditorsToContent);
+    </script>
+    <div id="google_translate_element" class="google-translate-hidden" aria-hidden="true"></div>
+    <script src="../language-switcher.js" defer></script>
+    <script src="../theme-toggle.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>
