@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 3 | Van Potjesverdeler naar Realtime Budget-app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-top">
+                <a class="brand" href="../../index.html">Menno de Vries</a>
+                <p class="role">Game Developer | Cybersecurity & Cloud Student</p>
+            </div>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="../../index.html">Home</a>
+                <a href="../../About_Me/AboutMe.html">About Me</a>
+                <a href="../../Projecten.html">Projecten</a>
+                <a href="../../Keuzehulp.html">Systeemadvies</a>
+                <a href="../../Cybersecurity.html">Cybersecurity</a>
+                <a class="is-active" aria-current="page" href="../../Blog.html">Blog</a>
+                <a href="../../Contact.html">Contact</a>
+                <div class="lang-switcher">
+                    <label for="lang-select">Taal</label>
+                    <select id="lang-select" class="js-language-select" aria-label="Selecteer taal">
+                        <option value="nl">Nederlands</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+                <button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Blog 3: Van Potjesverdeler naar Realtime Budget-app</h1>
+                <p>Vanaf de eerste commit is dit project stap voor stap gegroeid van een simpele potjesverdeler naar een complete budget-app met realtime inzichten.</p>
+            </section>
+
+            <section class="section">
+                <h2>De basisfase</h2>
+                <p>In het begin lag de focus op de kern: een bedrag invoeren, potjes aanmaken en percentages verdelen tot 100%. De verdeling werd direct zichtbaar, zodat zonder extra bevestigingsknop meteen duidelijk was wat elk potje kreeg.</p>
+                <p>Daarna is de preset-functionaliteit opgebouwd: presets opslaan, laden, overschrijven, verwijderen en een standaardpreset kiezen die automatisch bij het opstarten geladen wordt.</p>
+            </section>
+
+            <section class="section">
+                <h2>Architectuur en dataflow</h2>
+                <p>Vervolgens is de app-architectuur verbeterd richting MVVM, met een duidelijke scheiding tussen UI, logica en data-opslag. StateFlow werd gebruikt voor realtime updates en DataStore voor persistente opslag.</p>
+                <p>Daardoor werden wijzigingen in de UI betrouwbaarder en direct zichtbaar. Ook is import/export toegevoegd: presets kunnen als JSON geexporteerd en geimporteerd worden, inclusief conflict-afhandeling bij gelijke namen.</p>
+            </section>
+
+            <section class="section">
+                <h2>Advice-tab uitgebreid</h2>
+                <p>Naast basisinkomen zijn extra inkomensbronnen toegevoegd, zoals zorgtoeslag en verschillende DUO-componenten, plus vrije extra inkomsten. Deze worden gecombineerd in de berekening en meegenomen in gegenereerde presets.</p>
+                <p>De app rekent automatisch een aanbevolen verdeling uit op basis van inkomsten, vaste lasten en prioriteit: gebalanceerd, extra sparen of extra buffer.</p>
+            </section>
+
+            <section class="section">
+                <h2>Design en platformgedrag</h2>
+                <p>Op designniveau is de app gebruiksvriendelijker en visueel sterker gemaakt, met een verbeterde UI, light/dark ondersteuning en betere structuur in tabs en instellingen.</p>
+                <p>Daarnaast is edge-to-edge/fullscreen gedrag gefixt voor moderne Android-versies en One UI, zodat status- en navigatiebalken de content niet overlappen.</p>
+            </section>
+
+            <section class="section">
+                <h2>Inzichten en scenario-analyse</h2>
+                <p>In de laatste fase is de app uitgebreid met geavanceerde financiele inzichten. Er is een Inzichten-tab toegevoegd met gezondheidsscore, ratio's en scenario-simulatie.</p>
+                <p>Gebruikers kunnen nu realtime "wat-als" scenario's invullen (maandinkomen en vaste lasten) zonder de actieve preset te overschrijven. De score en uitlegtekst worden automatisch bijgewerkt bij geldige invoer, zonder extra knop. Bij lege of ongeldige invoer wordt bewust geen score getoond.</p>
+            </section>
+
+            <section class="section">
+                <h2>Samengevat</h2>
+                <p>Dit project is geevolueerd van een eenvoudige verdeeltool naar een schaalbare, realtime budget-app met presets, advies, import/export, themabeheer, scenario-analyse en een robuuste MVVM-architectuur.</p>
+            </section>
+
+            <section class="section">
+                <p>
+                    <a class="btn" href="../../Blog.html">Terug naar Blog overzicht</a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Menno de Vries. Alle rechten voorbehouden.</p>
+    </footer>
+    <div id="google_translate_element" class="google-translate-hidden" aria-hidden="true"></div>
+    <script src="../../language-switcher.js" defer></script>
+    <script src="../../theme-toggle.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>
